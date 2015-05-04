@@ -466,9 +466,9 @@ p {
   margin-top: 0; }
 
 a {
-  color: #EC3767; }
+  color: #ccc; }
   a:hover {
-    color: #ea2055; }
+    color: #bfbfbf; }
 
 .button, button {
   display: inline-block;
@@ -530,33 +530,33 @@ input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focu
 
 .button.button-primary, button.button-primary {
   color: #fff;
-  background-color: #EC3767;
-  border-color: #EC3767; }
+  background-color: #ccc;
+  border-color: #ccc; }
 
 input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary {
   color: #fff;
-  background-color: #EC3767;
-  border-color: #EC3767; }
+  background-color: #ccc;
+  border-color: #ccc; }
 
 .button.button-primary:hover, button.button-primary:hover {
   color: #fff;
-  background-color: #EC3767;
-  border-color: #EC3767; }
+  background-color: #ccc;
+  border-color: #ccc; }
 
 input[type="submit"].button-primary:hover, input[type="reset"].button-primary:hover, input[type="button"].button-primary:hover {
   color: #fff;
-  background-color: #EC3767;
-  border-color: #EC3767; }
+  background-color: #ccc;
+  border-color: #ccc; }
 
 .button.button-primary:focus, button.button-primary:focus {
   color: #fff;
-  background-color: #EC3767;
-  border-color: #EC3767; }
+  background-color: #ccc;
+  border-color: #ccc; }
 
 input[type="submit"].button-primary:focus, input[type="reset"].button-primary:focus, input[type="button"].button-primary:focus {
   color: #fff;
-  background-color: #EC3767;
-  border-color: #EC3767; }
+  background-color: #ccc;
+  border-color: #ccc; }
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"] {
   height: 38px;
   padding: 6px 10px;
@@ -589,11 +589,11 @@ textarea {
   padding-bottom: 6px; }
 
 input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus {
-  border: 1px solid #EC3767;
+  border: 1px solid #ccc;
   outline: 0; }
 
 textarea:focus, select:focus {
-  border: 1px solid #EC3767;
+  border: 1px solid #ccc;
   outline: 0; }
 
 label, legend {
@@ -710,14 +710,32 @@ h1, h2 {
   font-weight: 700; }
 
 .intro {
-  height: 500px;
-  background: #000; }
+  padding: 200px 0;
+  background: white; }
   .intro h1 {
-    font-size: 3.5rem; }
+    font-size: 3.5rem;
+    margin-bottom: 0rem;
+    color: #111; }
   .intro p {
     font-size: 2rem;
     width: 50%;
-    margin: auto; }
+    margin: auto;
+    color: #111; }
+
+.links {
+  padding-top: 15px; }
+  .links a {
+    font-family: "jaf-bernino-sans", sans-serif;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0 5px; }
+    .links a.twitter:hover {
+      color: #4099FF; }
+    .links a.dribbble:hover {
+      color: #EA4C89; }
+    .links a.email:hover {
+      color: #111; }
 
 .project {
   border-bottom: 1px solid #222; }
@@ -737,42 +755,19 @@ h1, h2 {
   .project .project-image {
     margin-bottom: 150px; }
     .project .project-image img {
-      max-width: 100%; }
+      max-width: 100%;
+      height: auto; }
 
-.send-message {
-  color: white;
+footer {
   padding: 150px 0;
-  display: block;
-  font-size: 3.5rem;
-  text-decoration: none; }
-
-.navigation {
-  position: fixed;
-  background-color: white;
-  left: 0;
-  z-index: 100;
-  height: 41px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.5s;
-          transition: all 0.5s; }
-  .navigation.headroom--unpinned {
-    top: 0;
-    visibility: visible; }
-  .navigation.headroom--pinned {
-    top: 68px;
-    border-top-color: #e1e1e1;
-    visibility: visible; }
-  .navigation.headroom--top {
-    top: -50px; }
-  .navigation nav {
-    padding-top: 8px;
-    display: inline-block; }
-    .navigation nav a {
-      text-transform: uppercase;
-      color: #aeaeae;
-      text-decoration: none;
-      padding: 8px 10px;
-      margin: 0 10px;
-      border-bottom: 2px solid white;
-      -webkit-transition: all 0.3s;
-              transition: all 0.3s; }
+  background-color: white; }
+  footer h2 {
+    color: #111;
+    display: block;
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-family: "jaf-bernino-sans", sans-serif;
+    font-weight: 700;
+    margin-bottom: 0; }
+  footer .links {
+    padding-top: 0; }
