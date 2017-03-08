@@ -1,0 +1,164 @@
+// Breakpoints
+$bp-larger-than-mobile    : "min-width: 400px" !default;
+$bp-larger-than-phablet   : "min-width: 550px" !default;
+$bp-larger-than-tablet    : "min-width: 750px" !default;
+$bp-larger-than-desktop   : "min-width: 1000px" !default;
+$bp-larger-than-desktophd : "min-width: 1400px" !default;
+
+div, p, a {
+  box-sizing: border-box;
+}
+
+.text-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (#{$bp-larger-than-tablet}) {
+    width: 80%;
+  }
+
+  @media (#{$bp-larger-than-desktop}) {
+    width: 65%;
+  }
+}
+
+.homepage-container {
+  display: flex;
+  flex-flow: row wrap;
+
+  .primary-navigation {
+    display: flex;
+    flex-direction: row-reverse;
+    flex: 1;
+    background: #f1f2f3;
+    height: 100vh;
+    text-align: left;
+    align-items: center;
+
+    .box {
+      width: 100%;
+      padding: 0 20px;
+
+      @media (#{$bp-larger-than-desktop}) {
+        padding: 0 10%;
+      }
+    }
+  }
+
+  .profile-picture-huge {
+    background: url(/assets/img/profile-background-image.jpg);
+    background-size: cover;
+    flex: 1;
+    display: none;
+    
+    @media (#{$bp-larger-than-tablet}) {
+      display: block;
+    }
+  }
+}
+
+.projects {
+  height: 100%;
+  flex: 100%;
+  height: 100vh;
+
+  @media (#{$bp-larger-than-tablet}) {
+    flex: 65%;
+    margin-left: 35%;
+  }
+
+  &.showing-project {
+    flex: 100%;
+    height: 70vh;
+    z-index: 10;
+    position: relative;
+    margin: 0;
+
+    > a {
+      height: 50%;
+    }
+  }
+
+  > a {
+    text-align: center;
+    flex: 100%;
+    height: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &.project-wr {
+      background: #F5C983;
+      color: #111;
+    }
+
+    &.project-ss {
+      background: #252B33;
+      color: #fff;
+    }
+
+    &.project-ta {
+      background: #F46060;
+      color: #fff;
+    }
+  }
+}
+
+
+// Project details
+.link-back {
+  background: white;
+  color: #111;
+  text-align: center;
+  flex-align: center;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  z-index: 10;
+
+  @media (#{$bp-larger-than-desktop}) {
+    left: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (#{$bp-larger-than-desktophd}) {
+    left: 30px;
+    top: 30px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.contact-box {
+  position: fixed;
+  left: 20px;
+  width: 10%;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.cta {
+  padding: 50px 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+body.project-writtenrealms {
+  background: #161616;
+  color: #e1e1e1;
+
+  .hero {
+    background: #F5C983;
+    color: #111;
+    padding: 50px 0;
+  }
+}

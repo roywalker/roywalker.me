@@ -6,10 +6,17 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     rename = require('gulp-rename'),
     minifyCSS = require('gulp-minify-css'),
-    package = require('./package.json');
+    package = require('./package.json'),
+    notify = require('gulp-notify');
 
 gulp.task('css', function () {
     return gulp.src('src/scss/style.scss')
+    .pipe(sass({
+        errLogToConsole: false,
+        onError: function(err) {
+            return notify().write(err);
+        }
+    }))
     .pipe(sass({errLogToConsole: true}))
     .pipe(autoprefixer('last 4 version'))
     .pipe(gulp.dest('assets/css'))
@@ -33,7 +40,7 @@ gulp.task('js',function(){
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
         server: {
-            baseDir: ""
+            baseDir: "./"
         }
     });
 });
@@ -42,7 +49,7 @@ gulp.task('bs-reload', function () {
 });
 
 gulp.task('default', ['css', 'js', 'browser-sync'], function () {
-    gulp.watch("src/scss/*/*.scss", ['css']);
+    gulp.watch("src/scss/**/*.scss", ['css']);
     gulp.watch("src/js/*.js", ['js']);
     gulp.watch("*.html", ['bs-reload']);
 });
