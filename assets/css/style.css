@@ -772,18 +772,26 @@ body {
   text-align: center; }
 
 p {
-  width: 70%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
-  font-size: 2.0rem; }
+  font-size: 2.0rem;
+  padding: 0 15px; }
+  @media (min-width: 750px) {
+    p {
+      width: 70%;
+      padding: 0; } }
 
 h1, h2 {
   font-family: "jaf-bernino-sans", sans-serif;
   font-weight: 700; }
 
 .intro {
-  padding: 200px 0;
+  padding: 100px 0;
   background: white; }
+  @media (min-width: 750px) {
+    .intro {
+      padding: 200px 0; } }
   .intro h1 {
     font-size: 3.5rem;
     margin-bottom: 0rem;
@@ -802,19 +810,28 @@ h1, h2 {
     font-size: 1.5rem;
     font-weight: 400;
     margin: 0 5px; }
-    .links a.twitter:hover {
+    .links a.twitter {
       color: #4099FF; }
-    .links a.dribbble:hover {
+    .links a.dribbble {
       color: #EA4C89; }
-    .links a.email:hover {
+    .links a.email {
       color: #111; }
+    .links a:hover {
+      text-decoration: underline; }
 
 .project {
-  border-bottom: 1px solid #222; }
+  border-bottom: 1px solid #222;
+  padding-bottom: 50px; }
+  @media (min-width: 750px) {
+    .project {
+      padding-bottom: 0; } }
   .project h2 {
     font-size: 3.0rem;
-    padding-top: 250px;
+    padding-top: 100px;
     margin-bottom: 1.0rem; }
+    @media (min-width: 750px) {
+      .project h2 {
+        padding-top: 250px; } }
   .project .line {
     width: 2.0rem;
     height: 1px;
@@ -823,9 +840,15 @@ h1, h2 {
   .project .tasks {
     color: #999;
     font-style: oblique;
-    margin-bottom: 200px; }
+    margin-bottom: 100px; }
+    @media (min-width: 750px) {
+      .project .tasks {
+        margin-bottom: 200px; } }
   .project .project-image {
-    margin-bottom: 150px; }
+    margin-bottom: 15px; }
+    @media (min-width: 750px) {
+      .project .project-image {
+        margin-bottom: 150px; } }
     .project .project-image img {
       max-width: 100%;
       height: auto; }

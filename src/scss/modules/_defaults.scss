@@ -6,10 +6,16 @@ body {
 }
 
 p {
-  width: 70%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   font-size: 2.0rem;
+  padding: 0 15px;
+
+  @media (#{$bp-larger-than-tablet}) {
+    width: 70%;
+    padding: 0;
+  }
 }
 
 h1, h2 {
@@ -18,8 +24,12 @@ h1, h2 {
 }
 
 .intro {
-  padding: 200px 0;
+  padding: 100px 0;
   background: white;
+
+  @media (#{$bp-larger-than-tablet}) {
+    padding: 200px 0;
+  }
   h1 {
     font-size: 3.5rem;
     margin-bottom: 0rem;
@@ -41,25 +51,40 @@ h1, h2 {
     font-size: 1.5rem;
     font-weight: 400;
     margin: 0 5px;
-    &.twitter:hover {
+    &.twitter {
       color: #4099FF;
     }
-    &.dribbble:hover {
+    &.dribbble {
       color: #EA4C89;
     }
-    &.email:hover {
+    &.email {
       color: #111;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
 
 .project {
   border-bottom: 1px solid #222;
+  padding-bottom: 50px;
+
+  @media (#{$bp-larger-than-tablet}) {
+    padding-bottom: 0;
+  }
+  
   h2 {
     font-size: 3.0rem;
-    padding-top: 250px;
+    padding-top: 100px;
     margin-bottom: 1.0rem;
+
+    @media (#{$bp-larger-than-tablet}) {
+      padding-top: 250px;
+    }
   }
+
   .line {
     width: 2.0rem;
     height: 1px;
@@ -69,10 +94,19 @@ h1, h2 {
   .tasks {
     color: #999;
     font-style: oblique;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
+
+    @media (#{$bp-larger-than-tablet}) {
+      margin-bottom: 200px;
+    }
   }
   .project-image {
-    margin-bottom: 150px;
+    margin-bottom: 15px;
+
+    @media (#{$bp-larger-than-tablet}) {
+      margin-bottom: 150px;
+    }
+
     img {
       max-width: 100%;
       height: auto;
