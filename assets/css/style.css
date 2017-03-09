@@ -774,7 +774,8 @@ body {
 p {
   width: 70%;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  font-size: 2.0rem; }
 
 h1, h2 {
   font-family: "jaf-bernino-sans", sans-serif;
