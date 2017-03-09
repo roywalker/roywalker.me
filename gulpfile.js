@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     jshint = require('gulp-jshint'),
     rename = require('gulp-rename'),
-    minifyCSS = require('gulp-minify-css'),
+    cleanCSS = require('gulp-clean-css'),
     package = require('./package.json'),
     notify = require('gulp-notify');
 
@@ -20,7 +20,7 @@ gulp.task('css', function () {
     .pipe(sass({errLogToConsole: true}))
     .pipe(autoprefixer('last 4 version'))
     .pipe(gulp.dest('assets/css'))
-    .pipe(minifyCSS())
+    .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.reload({stream:true}));

@@ -31,16 +31,28 @@ div, p, a {
 
   .primary-navigation {
     display: flex;
-    flex-direction: row-reverse;
-    flex: 1;
-    background: #f1f2f3;
-    height: 100vh;
+    //flex-direction: row-reverse;
+    flex: 50%;
     text-align: left;
-    align-items: center;
+    //align-items: center;
+
+    @media (#{$bp-larger-than-tablet}) {
+      height: 100vh;
+      //width: 50%;
+    }
 
     .box {
       width: 100%;
       padding: 0 20px;
+      background: #f1f2f3;
+
+      @media (#{$bp-larger-than-tablet}) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+      }
 
       @media (#{$bp-larger-than-desktop}) {
         padding: 0 10%;
@@ -48,41 +60,43 @@ div, p, a {
     }
   }
 
+  .right-column {
+    width: 100%;
+
+    @media (#{$bp-larger-than-tablet}) {
+      flex : 50%;
+    }
+  }
+
   .profile-picture-huge {
     background: url(/assets/img/profile-background-image.jpg);
     background-size: cover;
-    flex: 1;
     display: none;
     
     @media (#{$bp-larger-than-tablet}) {
       display: block;
+      height: 100vh;
     }
   }
 }
 
 .projects {
   height: 100%;
-  flex: 100%;
   height: 100vh;
-
-  @media (#{$bp-larger-than-tablet}) {
-    flex: 65%;
-    margin-left: 35%;
-  }
 
   &.showing-project {
     flex: 100%;
-    height: 70vh;
+    height: 66.6vh;
     z-index: 10;
     position: relative;
     margin: 0;
 
-    > a {
+    a {
       height: 50%;
     }
   }
 
-  > a {
+  a {
     text-align: center;
     flex: 100%;
     height: 33.3%;
@@ -104,6 +118,21 @@ div, p, a {
     &.project-ta {
       background: #F46060;
       color: #fff;
+    }
+
+    &.project-ex {
+      background: #ccc;
+      color: #fff;
+    }
+  }
+
+  .half {
+    display: flex;
+    height: 33.3%;
+
+    a {
+      flex: 50%;
+      height: 100%;
     }
   }
 }

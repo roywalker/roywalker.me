@@ -1,3 +1,4 @@
 RewriteEngine On
-
-RewriteBase /app
+RewriteBase /
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.*)$ $1.html [L,R=301]

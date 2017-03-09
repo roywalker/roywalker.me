@@ -28,7 +28,12 @@ body {
 /**
  * Add the correct display in IE 9-.
  */
-article, aside, footer, header, nav, section {
+article,
+aside,
+footer,
+header,
+nav,
+section {
   display: block; }
 
 /**
@@ -41,7 +46,9 @@ article, aside, footer, header, nav, section {
  * Add the correct display in IE 9-.
  * 1. Add the correct display in IE.
  */
-figcaption, figure, main {
+figcaption,
+figure,
+main {
   /* 1 */
   display: block; }
 
@@ -89,7 +96,8 @@ a {
  * Remove the outline on focused links when they are also active or hovered
  * in all browsers (opinionated).
  */
-a:active, a:hover {
+a:active,
+a:hover {
   outline-width: 0; }
 
 /**
@@ -107,20 +115,24 @@ abbr[title] {
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
-b, strong {
+b,
+strong {
   font-weight: inherit; }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
-b, strong {
+b,
+strong {
   font-weight: 600; }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-code, kbd, samp {
+code,
+kbd,
+samp {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
@@ -149,7 +161,8 @@ small {
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -166,7 +179,8 @@ sup {
 /**
  * Add the correct display in IE 9-.
  */
-audio, video {
+audio,
+video {
   display: inline-block; }
 
 /**
@@ -194,7 +208,11 @@ svg:not(:root) {
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: sans-serif;
   /* 1 */
   font-size: 100%;
@@ -208,7 +226,8 @@ button, input, optgroup, select, textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-button, input {
+button,
+input {
   /* 1 */
   overflow: visible; }
 
@@ -216,7 +235,8 @@ button, input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-button, select {
+button,
+select {
   /* 1 */
   text-transform: none; }
 
@@ -225,21 +245,30 @@ button, select {
  *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
-button, html [type="button"], [type="reset"], [type="submit"] {
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
   /* 2 */ }
 
 /**
  * Remove the inner border and padding in Firefox.
  */
-button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0; }
 
 /**
  * Restore the focus styles unset by the previous rule.
  */
-button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText; }
 
 /**
@@ -290,7 +319,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
-[type="checkbox"], [type="radio"] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -299,7 +329,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
 /**
@@ -315,7 +346,8 @@ textarea {
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 /**
@@ -334,7 +366,8 @@ textarea {
  * Add the correct display in IE 9-.
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
-details, menu {
+details,
+menu {
   display: block; }
 
 /*
@@ -432,90 +465,122 @@ div, p, a {
     width: 65%; } }
 
 .homepage-container {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap; }
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
 
 .homepage-container .primary-navigation {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row-reverse;
-      flex-direction: row-reverse;
-  -ms-flex: 1;
-      flex: 1;
-  background: #f1f2f3;
-  height: 100vh;
-  text-align: left;
-  -ms-flex-align: center;
-      align-items: center; }
+  -webkit-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  text-align: left; }
+
+@media (min-width: 750px) {
+  .homepage-container .primary-navigation {
+    height: 100vh; } }
 
 .homepage-container .primary-navigation .box {
   width: 100%;
-  padding: 0 20px; }
+  padding: 0 20px;
+  background: #f1f2f3; }
+
+@media (min-width: 750px) {
+  .homepage-container .primary-navigation .box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh; } }
 
 @media (min-width: 1000px) {
   .homepage-container .primary-navigation .box {
     padding: 0 10%; } }
 
+.homepage-container .right-column {
+  width: 100%; }
+
+@media (min-width: 750px) {
+  .homepage-container .right-column {
+    -webkit-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%; } }
+
 .homepage-container .profile-picture-huge {
   background: url(/assets/img/profile-background-image.jpg);
   background-size: cover;
-  -ms-flex: 1;
-      flex: 1;
   display: none; }
 
 @media (min-width: 750px) {
   .homepage-container .profile-picture-huge {
-    display: block; } }
+    display: block;
+    height: 100vh; } }
 
 .projects {
   height: 100%;
-  -ms-flex: 100%;
-      flex: 100%;
   height: 100vh; }
 
-@media (min-width: 750px) {
-  .projects {
-    -ms-flex: 65%;
-        flex: 65%;
-    margin-left: 35%; } }
-
 .projects.showing-project {
-  -ms-flex: 100%;
-      flex: 100%;
-  height: 70vh;
+  -webkit-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  height: 66.6vh;
   z-index: 10;
   position: relative;
   margin: 0; }
 
-.projects.showing-project > a {
+.projects.showing-project a {
   height: 50%; }
 
-.projects > a {
+.projects a {
   text-align: center;
-  -ms-flex: 100%;
-      flex: 100%;
+  -webkit-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
   height: 33.3%;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-decoration: none; }
 
-.projects > a.project-wr {
+.projects a.project-wr {
   background: #F5C983;
   color: #111; }
 
-.projects > a.project-ss {
+.projects a.project-ss {
   background: #252B33;
   color: #fff; }
 
-.projects > a.project-ta {
+.projects a.project-ta {
   background: #F46060;
   color: #fff; }
+
+.projects a.project-ex {
+  background: #ccc;
+  color: #fff; }
+
+.projects .half {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 33.3%; }
+
+.projects .half a {
+  -webkit-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  height: 100%; }
 
 .link-back {
   background: white;
