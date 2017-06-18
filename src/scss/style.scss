@@ -1,4 +1,5 @@
 // Base
+@import 'base/_basics.scss';
 @import 'base/_normalize.scss';
 @import 'base/_typography.scss';
 
@@ -6,4 +7,5 @@
 // Styles
 //----------------------------------*/
 
-@import 'modules/_basics.scss';
+@import 'modules/_homepage.scss';
+@import 'modules/_project-details.scss';

@@ -1,85 +1,73 @@
-// unitless function to convert px to em
-@function em($pixels, $context: $browser-context) {
-  @if (unitless($pixels)) {
-    $pixels: $pixels * 1px;
-  }
-  @if (unitless($context)) {
-    $context: $context * 1px;
-  }
-  @return $pixels / $context * 1em;
-}
-
-// breakpoint mixin
-@mixin breakpoint($mq01: 0, $mq2: false, $maxmin: max-width) {
-  @if $mq2 == false {
-    @media ($maxmin: $mq01) {
-      @content;
-    }
-  }
-  @else {
-    @media (min-width: $mq01) and (max-width: $mq2) {
-      @content;
-    }
-  }
-}
-
-// responsive font size mixin
-@mixin font-size-map($font-size-map) {
-  @each $breakpoint, $font-size in $font-size-map {
-    @if $breakpoint == null {
-      font-size: em($font-size);
-    } @else {
-      @include breakpoint($breakpoint) {
-        font-size: em($font-size);
-      }
-    }
-  }
-}
-
-// breakpoint variables
-$lg: 2000px;
-$md: 1400px;
-$sm: 750px;
-$xs: 550px;
-
-// body font size
-$browser-context: 16;
-
-// typography scale
-$body-font-size: (null: 20, $md: 18, $sm: 17, $xs: 16);
-$h1-font-size: (null: 60);
-$h2-font-size: (null: 40px);
-$h3-font-size: (null: 27px);
-$h4-font-size: (null: 18px);
-$h5-font-size: (null: 12px);
-
 html {
-  line-height: 1.2;
   font-family: 'freight-text-pro', serif;
+  font-size: 18px;
+  line-height: 30px;
   font-weight: 300;
-  @include font-size-map($body-font-size);
+  color: $dark-text;
+  
+  @media (#{$bp-larger-than-mobile}) {
+    font-size: 22px;
+    line-height: 36px;
+  }
 }
 
 p {
-  @include font-size-map($body-font-size);
-}
-
-h1 {
-  @include font-size-map($h1-font-size);
+  a {
+    color: $dark-text;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid #3F3F40;
+    line-height: 0.9;
+  }
 }
 
 h2 {
-  @include font-size-map($h2-font-size);
+  font-size: 23px;
+  line-height: 38px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+  @media (#{$bp-larger-than-mobile}) {
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  @media (#{$bp-larger-than-desktophd}) {
+    font-size: 27px;
+    line-height: 42px;
+  }
+
+  &.bio {
+    font-weight: 400;
+  }
+
+  &.intro {
+    font-size: 26px;
+    line-height: 41px;
+
+    @media (#{$bp-larger-than-mobile}) {
+      font-size: 28px;
+      line-height: 43px;
+    }
+
+    @media (#{$bp-larger-than-desktophd}) {
+      font-size: 31px;
+      line-height: 45px;
+    }
+  }
 }
 
 h3 {
-  @include font-size-map($h3-font-size);
-}
+  font-size: 23px;
+  line-height: 58px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-top: 10px;
 
-h4 {
-  @include font-size-map($h4-font-size);
-}
-
-h5 {
-  @include font-size-map($h5-font-size);
+  @media (#{$bp-larger-than-mobile}) {
+    font-size: 28px;
+    line-height: 75px;
+  }
 }

@@ -3,9 +3,9 @@
 
 # TEAM
 
-    Ruy Maraventano (AKA Roy Walker) -- Designer -- twitter.com/roywalker
+    Roy Walker -- Product Designer -- twitter.com/roywalker
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Apache Server Configs, jQuery, Modernizr, Normalize.css, Gulp, Sass

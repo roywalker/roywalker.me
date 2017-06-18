@@ -1,0 +1,340 @@
+// Project details
+body, html {
+  overflow-x: hidden;
+}
+
+body {
+  &.project-writtenrealms {
+    background: #161616;
+    color: $light-text;
+
+    .hero {
+      background: #fdefd9;
+      background: -moz-radial-gradient(center, ellipse cover, #fdefd9 0%, #f5c983 100%);
+      background: -webkit-radial-gradient(center, ellipse cover, #fdefd9 0%,#f5c983 100%);
+      background: radial-gradient(ellipse at center, #fdefd9 0%,#f5c983 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdefd9', endColorstr='#f5c983',GradientType=1 );
+
+      .background-deco {
+        background: url(/assets/img/wr-hero-background.svg) no-repeat bottom -1px left 0;
+        background-size: 100% auto;
+        color: #161616;
+
+        .vertically-centered {
+          @media (#{$bp-larger-than-tablet}) {
+            padding-bottom: 50px;
+          }
+
+          @media (#{$bp-larger-than-desktop}) {
+            padding-bottom: 140px;
+          }
+        }
+      }
+    }
+
+    .actual-content-top {
+      background: #161616;
+    }
+
+    .contact-cta {
+      background: #f1f2f3;
+    }
+  }
+
+  &.project-travelapp {
+    color: $dark-text;
+
+    .link-back {
+      background-color: #F8F9FA;
+    }
+
+    .hero {
+      .background-deco {
+        background: url(/assets/img/ta-hero-background.svg) repeat-x top center;
+        background-size: auto 100%;
+        color: #161616;
+
+        img {
+          box-shadow: 0 0 20px 20px white;
+          background: white;
+          display: block;
+        }
+
+        h2 {
+          margin: 0;
+          box-shadow: 0 10px 10px 5px white;
+          background: white;
+          display:  inline-block;
+        }
+      }
+    }
+
+    .actual-content-top {
+      background: white;
+      box-shadow: 0 50px 50px rgba(0,0,0,0.03);
+    }
+
+    .contact-cta {
+      background: #f1f2f3;
+    }
+
+    .interactive-prototype-background {
+      text-align: center;
+      position: relative;
+      background: url(/assets/img/project-image-travelapp-4.jpg) no-repeat center;
+      width: 160%;
+      transform: translateX(-50%);
+      margin-left: 50%;
+      margin-top: 90px;
+      padding-bottom: 45px;
+
+      .label {
+        width: 251px;
+        height: 172px;
+        background: url(/assets/img/project-image-travelapp-4-b.svg) no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(-40%, -50%);
+      }
+    }
+  }
+
+  .table-container {
+    overflow: scroll-x  ;
+
+    @media (#{$bp-larger-than-mobile}) {
+      overflow: visible;
+    }
+  }
+
+  table {
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 90px;
+    font-size: 18px;
+    line-height: 1.5;
+
+    @media (#{$bp-larger-than-desktop}) {
+      width: 140%;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+
+    th {
+      border-bottom: 2px solid #eaeaea;
+      text-align: center;
+      width: 25%;
+      padding: 8px;
+    }
+
+    td {
+      text-align: center;
+      border-bottom: 1px solid #eaeaea;
+      padding: 8px 15px 8px 15px;
+      min-width: 110px;
+
+      &.left {
+        text-align: left;
+        background: #fbfbfb;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @media (#{$bp-larger-than-mobile}) {
+          padding-left: 30px;
+        }
+      }
+    }
+
+    .subcategory {
+      font-weight: 500;
+      line-height: 1;
+
+      td {
+        color: #a2a9aa;
+        padding: 22px 0 8px 15px;
+
+        @media (#{$bp-larger-than-mobile}) {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+
+  .hero {
+    .background-deco {
+      position: relative;
+      height: 60vh;
+
+      @media (#{$bp-larger-than-desktophd}) {
+        height: 45vh;
+      }
+
+      .vertically-centered {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 100%;
+        padding-bottom: 0;
+      }
+
+      h1 {
+        display: none;
+      }
+
+      h2 {
+        margin: 0;
+      }
+
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+
+  .actual-content-top {
+    margin-bottom: 50vh;
+    z-index: 10;
+    position: relative;
+  }
+
+  .contact-cta {
+    height: 50vh;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    .vertically-centered {
+      position: absolute;
+      top: 49%;
+      transform: translate(0, -50%);
+      width: 100%
+    }
+
+    h3 {
+      margin: 0;
+      line-height: 2;
+      color: $dark-text;
+    }
+
+    p {
+      margin: 0;
+      color: $dark-text;
+
+      a {
+        color: $dark-text;
+        border-bottom-color: $dark-text;
+      }
+    }
+  }
+}
+
+.link-back {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  text-indent: -99999px;
+  border: none;
+  margin-right: 5px;
+  transition: box-shadow 0.3s, top 0.2s, opacity 0.2s;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: white url(/assets/img/arrow-back.svg) no-repeat left 15px center;
+  z-index: 99;
+
+  &:hover {
+    box-shadow: 0 7px 7px rgba(0,0,0,0.15);
+    top: 18px!important;
+  }
+
+  &.headroom--unpinned {
+    top: 5px;
+    opacity: 0;
+  }
+}
+
+.project-content {
+  padding-bottom: 80px;
+
+  img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 45px;
+    max-width: 100%;
+    height: auto;
+
+    @media (#{$bp-larger-than-tablet}) {
+      max-width: 120%;
+    }
+
+    @media (#{$bp-larger-than-desktop}) {
+      max-width: none;
+    }
+  }
+
+  h2 {
+    margin: 75px 0 45px;
+  }
+
+  h3 {
+    margin: 45px 0 0;
+  }
+
+  img + h3 {
+    margin-top: 30px;
+  }
+
+  .section-spacing {
+    height: 30px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 15px;
+  }
+
+  q {
+    margin-top: 130px;
+    display: block;
+    font-style: italic;
+    opacity: 0.5;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: 300;
+    width: 90%;
+    padding: 10px 5%;
+
+    @media (#{$bp-larger-than-tablet}) {
+      width: 100%;
+      padding: 10px 50px;
+    }
+
+    @media (#{$bp-larger-than-desktop}) {
+      width: 130%;
+    }
+  }
+
+  ol li {
+    margin-bottom: 15px;
+  }
+
+  .q-author {
+    display: block;
+    font-size: 22px;
+    text-align: center;
+    opacity: 0.2;
+    margin-bottom: 100px;
+  }
+}
