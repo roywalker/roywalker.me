@@ -1,19 +1,13 @@
-(function ($, window, document, undefined) {
+(function() {
+    var header = document.querySelector(".link-back");
 
-  'use strict';
+    var headroom = new Headroom(header, {
+        tolerance: {
+          down : 10,
+          up : 10
+        },
+        offset : 300
+    });
+    headroom.init();
 
-  $(function () {
-    // FastShell
-  });
-
-})(jQuery, window, document);
-
-$jquery('.navigation').headroom({
-    // vertical offset in px before element is first unpinned
-    offset : 500,
-    // scroll tolerance in px before state changes
-    tolerance : {
-        down : 2,
-        up : 0
-    }
-});
+}());

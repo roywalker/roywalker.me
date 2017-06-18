@@ -1,0 +1,73 @@
+html {
+  font-family: 'freight-text-pro', serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+  color: $dark-text;
+  
+  @media (#{$bp-larger-than-mobile}) {
+    font-size: 22px;
+    line-height: 36px;
+  }
+}
+
+p {
+  a {
+    color: $dark-text;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid #3F3F40;
+    line-height: 0.9;
+  }
+}
+
+h2 {
+  font-size: 23px;
+  line-height: 38px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+  @media (#{$bp-larger-than-mobile}) {
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  @media (#{$bp-larger-than-desktophd}) {
+    font-size: 27px;
+    line-height: 42px;
+  }
+
+  &.bio {
+    font-weight: 400;
+  }
+
+  &.intro {
+    font-size: 26px;
+    line-height: 41px;
+
+    @media (#{$bp-larger-than-mobile}) {
+      font-size: 28px;
+      line-height: 43px;
+    }
+
+    @media (#{$bp-larger-than-desktophd}) {
+      font-size: 31px;
+      line-height: 45px;
+    }
+  }
+}
+
+h3 {
+  font-size: 23px;
+  line-height: 58px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+  @media (#{$bp-larger-than-mobile}) {
+    font-size: 28px;
+    line-height: 75px;
+  }
+}
