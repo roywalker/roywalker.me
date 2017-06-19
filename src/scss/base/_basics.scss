@@ -18,7 +18,7 @@ div, p, a {
   width: 100%;
   max-width: 850px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 25px;
 
   @media (#{$bp-larger-than-tablet}) {
     width: 80%;

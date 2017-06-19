@@ -6,7 +6,7 @@ div, p, a {
   width: 100%;
   max-width: 850px;
   margin: 0 auto;
-  padding: 0 20px; }
+  padding: 0 25px; }
 
 @media (min-width: 750px) {
   .text-container {
@@ -418,8 +418,8 @@ template {
 
 html {
   font-family: 'freight-text-pro', serif;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 1.58;
   font-weight: 300;
   color: #3F3F40; }
 
